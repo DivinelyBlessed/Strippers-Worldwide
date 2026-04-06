@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PL9NPRYWP3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PL9NPRYWP3');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trending Now | Strippers Worldwide.com</title>
+<meta name="description" content="What's trending in dating, live entertainment and lifestyle right now. Curated daily from across the web.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Strippers Worldwide">
+<meta property="og:title" content="Trending Now | Strippers Worldwide.com">
+<meta property="og:description" content="What's trending in dating, live entertainment and lifestyle right now. Curated daily from across the web.">
+<meta property="og:url" content="https://strippersworldwide.com/trending/">
+<meta property="og:image" content="https://strippersworldwide.com/assets/images/headers/girl-in-red-lingerie.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Trending Now | Strippers Worldwide.com">
+<meta name="twitter:description" content="What's trending in dating, live entertainment and lifestyle right now.">
+<meta name="twitter:image" content="https://strippersworldwide.com/assets/images/headers/girl-in-red-lingerie.jpg">
+<meta name="twitter:site" content="@StrippersWW">
+<link rel="canonical" href="https://strippersworldwide.com/trending/">
+<link rel="icon" href="../assets/images/real-girls/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css">
+<link rel="stylesheet" href="../shared.css">
+<style>
+
+  /* ── PAGE HEADER ── */
+  .trending-header {
+    padding: 48px 20px 36px;
+    border-bottom: 1px solid var(--border);
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,45,120,0.12) 0%, transparent 70%);
+  }
+  .trending-header .container {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+  }
+  .trending-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    letter-spacing: 3px; line-height: 1;
+  }
+  .trending-title span {
+    background: linear-gradient(90deg, #ff2d78, #9b5fe8);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .trending-subtitle { color: var(--muted); font-size: 0.88rem; margin-top: 6px; }
+
+  .live-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,45,120,0.1); border: 1px solid rgba(255,45,120,0.3);
+    border-radius: 999px; padding: 8px 18px;
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--text);
+  }
+  .live-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #ff2d78; box-shadow: 0 0 6px rgba(255,45,120,0.9);
+    animation: blink 1.4s ease-in-out infinite; flex-shrink: 0;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+  /* ── CATEGORY TABS ── */
+  .cat-tabs {
+    padding: 14px 20px; border-bottom: 1px solid var(--border);
+    background: var(--bg2); overflow-x: auto;
+    position: sticky; top: 68px; z-index: 50;
+  }
+  .cat-tabs .container { max-width: 1200px; margin: 0 auto; display: flex; gap: 8px; flex-wrap: nowrap; }
+  .cat-tab {
+    white-space: nowrap; background: none; border: 1px solid var(--border);
+    border-radius: 20px; padding: 6px 16px; font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase; color: var(--muted);
+    cursor: pointer; transition: all 0.2s; font-family: inherit;
+  }
+  .cat-tab:hover, .cat-tab.active {
+    border-color: #ff2d78; color: var(--text); background: rgba(255,45,120,0.1);
+  }
+
+  /* ── CURATOR FEED SECTION ── */
+  .feed-section { padding: 40px 20px 60px; }
+  .feed-section .container { max-width: 1200px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--purple); margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem;
+    letter-spacing: 2px; margin-bottom: 6px;
+  }
+  .section-sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 32px; }
+
+  /* Override Curator.io default styles to match dark theme */
+  #curator-feed-default-feed-layout {
+    background: transparent !important;
+  }
+  .crt-logo { display: none !important; } /* hide "Powered by Curator" branding */
+
+  /* ── CTA STRIP ── */
+  .cta-strip {
+    background: linear-gradient(135deg, rgba(255,45,120,0.1), rgba(155,95,232,0.1));
+    border: 1px solid rgba(255,45,120,0.2);
+    border-radius: 18px; padding: 36px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap; margin-top: 48px;
+  }
+  .cta-strip h3 {
+    font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.4rem, 3vw, 2rem);
+    letter-spacing: 2px; margin-bottom: 6px;
+  }
+  .cta-strip p { color: var(--muted); font-size: 0.88rem; max-width: 480px; line-height: 1.6; }
+  .cta-strip-btns { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+
+  /* ── PROFILE CARDS STRIP ── */
+  .profiles-strip { padding: 0 20px 60px; }
+  .profiles-strip .container { max-width: 1200px; margin: 0 auto; }
+  .profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 14px; margin-top: 24px;
+  }
+  .profile-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    overflow: hidden; text-decoration: none; color: var(--text);
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 20px 16px 16px; text-align: center;
+  }
+  .profile-card:hover {
+    transform: translateY(-4px); border-color: rgba(255,45,120,0.4);
+    box-shadow: 0 8px 28px rgba(255,45,120,0.12);
+  }
+  .profile-avatar {
+    width: 68px; height: 68px; border-radius: 50%;
+    background: linear-gradient(135deg, #ff2d78, #9b5fe8);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem; margin-bottom: 10px; overflow: hidden; flex-shrink: 0;
+  }
+  .profile-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .profile-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 4px; }
+  .profile-tag { font-size: 0.7rem; color: var(--muted); margin-bottom: 10px; }
+  .profile-btn {
+    background: linear-gradient(135deg, #c4003e, #7a20d4); color: #fff;
+    border: none; border-radius: 999px; padding: 6px 16px;
+    font-size: 0.72rem; font-weight: 700; cursor: pointer;
+    text-decoration: none; letter-spacing: 0.5px; white-space: nowrap;
+    transition: transform 0.15s;
+  }
+  .profile-btn:hover { transform: scale(1.05); }
+
+  /* ── FOOTER ── */
+  footer { background: #0a0a0c; border-top: 1px solid var(--border); padding: 32px 0 12px; }
+  .footer-grid { max-width: 100%; padding: 0 60px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+  .footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
+  .footer-brand p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; font-weight: 300; max-width: 280px; margin-left: 0; }
+  .footer-col h4 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text); margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 0.85rem; color: var(--muted); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+  .footer-col a:hover { color: #ff2d78; }
+  .footer-bottom { max-width: 100%; padding-left: 60px; padding-right: 60px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+  .footer-bottom span { font-size: 0.78rem; color: rgba(138,122,150,0.6); line-height: 1.6; }
+
+  @media(max-width: 768px) {
+    .nav-logo { margin-left: -36px !important; }
+    .nav-logo img { margin-right: -20px !important; }
+    .cta-strip { flex-direction: column; }
+    .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px 16px !important; padding: 0 24px !important; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { padding-left: 24px !important; padding-right: 24px !important; flex-direction: column; gap: 10px; }
+    .profiles-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+<script src="../age-gate.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" style="margin-left:-16px;">
+    <img src="../assets/images/real-girls/logo.jpeg" alt="" width="72" height="72" style="flex-shrink:0;mix-blend-mode:screen;filter:brightness(1.3) saturate(1.5) contrast(1.1);object-fit:contain;margin-right:-18px;">
+    <span style="white-space:nowrap;background:linear-gradient(90deg,#ff2d78,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;position:relative;top:4px;">Strippers Worldwide</span>
+  </a>
+  <div class="nav-links">
+    <a href="/ai-girls/" class="nav-pill">AI Girls</a>
+    <a href="/live-cams/" class="nav-pill">Live Cams</a>
+    <a href="/dating/" class="nav-pill">Dating</a>
+    <a href="/offers/" class="nav-pill">Hot Offers</a>
+    <a href="/models/" class="nav-pill gold">⭐ VIP Models</a>
+    <a href="https://t.mbjms.com/389314/3788/0?bo=3471,3472,3473,3474,3475&po=6456&aff_sub5=SF_006OG000004lmDN" class="nav-cta">Get Access</a>
+  </div>
+</nav>
+
+<div class="page-body">
+
+<!-- PAGE HEADER -->
+<div class="trending-header">
+  <div class="container">
+    <div>
+      <div class="trending-title">What's <span>Trending</span></div>
+      <div class="trending-subtitle">Curated daily · Dating, lifestyle & live entertainment · Updated automatically</div>
+    </div>
+    <div class="live-pill"><span class="live-dot"></span> Live Feed — Updates 24/7</div>
+  </div>
+</div>
+
+<!-- CATEGORY TABS -->
+<div class="cat-tabs">
+  <div class="container">
+    <button class="cat-tab active">All</button>
+    <button class="cat-tab">Dating</button>
+    <button class="cat-tab">Lifestyle</button>
+    <button class="cat-tab">Entertainment</button>
+    <button class="cat-tab">Models</button>
+  </div>
+</div>
+
+<!-- CURATOR FEED -->
+<section class="feed-section">
+  <div class="container">
+    <div class="section-label">Live Feed</div>
+    <div class="section-title">Trending Right Now</div>
+    <p class="section-sub">Fresh content pulled daily from across the web. Scroll, discover, connect.</p>
+
+    <!-- Curator.io embed -->
+    <div id="curator-feed-default-feed-layout">
+      <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+    </div>
+    <script type="text/javascript">
+      (function(){
+        var i,e,d=document,s="script";
+        i=d.createElement("script");i.async=1;i.charset="UTF-8";
+        i.src="https://cdn.curator.io/published/5cf2f073-b594-4f60-9d14-0a91c0037f52.js";
+        e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i,e);
+      })();
+    </script>
+
+    <!-- CTA strip below feed -->
+    <div class="cta-strip">
+      <div>
+        <h3>Ready for the Real Thing?</h3>
+        <p>Browse live cam shows, chat with AI companions, or connect with real dating profiles — all in one place.</p>
+      </div>
+      <div class="cta-strip-btns">
+        <a href="/live-cams/" class="btn-primary">Watch Live Now</a>
+        <a href="/dating/" class="btn-secondary">Browse Profiles</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATING PROFILES STRIP -->
+<section class="profiles-strip">
+  <div class="container">
+    <div class="section-label">Featured Profiles</div>
+    <div class="section-title">Meet Our Members</div>
+    <p class="section-sub">Real profiles, real connections. Click any profile to view and connect.</p>
+    <div class="profiles-grid">
+
+      <a href="/dating/kate/" class="profile-card">
+        <div class="profile-avatar"><img src="../assets/images/real-girls/kate.PNG" alt="Kate"></div>
+        <div class="profile-name">Kate</div>
+        <div class="profile-tag">Online Now</div>
+        <span class="profile-btn">View Profile</span>
+      </a>
+
+      <a href="/dating/emily/" class="profile-card">
+        <div class="profile-avatar"><img src="../assets/images/real-girls/emily.jpg" alt="Emily"></div>
+        <div class="profile-name">Emily</div>
+        <div class="profile-tag">Online Now</div>
+        <span class="profile-btn">View Profile</span>
+      </a>
+
+      <a href="/dating/sharon/" class="profile-card">
+        <div class="profile-avatar"><img src="../assets/images/real-girls/sharon.jpg" alt="Sharon"></div>
+        <div class="profile-name">Sharon</div>
+        <div class="profile-tag">Online Now</div>
+        <span class="profile-btn">View Profile</span>
+      </a>
+
+      <a href="/dating/roxy/" class="profile-card">
+        <div class="profile-avatar"><img src="../assets/images/real-girls/roxy.jpg" alt="Roxy"></div>
+        <div class="profile-name">Roxy</div>
+        <div class="profile-tag">Online Now</div>
+        <span class="profile-btn">View Profile</span>
+      </a>
+
+      <a href="/dating/ana-keys/" class="profile-card">
+        <div class="profile-avatar"><img src="../assets/images/ai-girls-profile/ana-keys.png" alt="Ana Keys"></div>
+        <div class="profile-name">Ana Keys</div>
+        <div class="profile-tag">Online Now</div>
+        <span class="profile-btn">View Profile</span>
+      </a>
+
+      <a href="/dating/bella/" class="profile-card">
+        <div class="profile-avatar">💋</div>
+        <div class="profile-name">Bella</div>
+        <div class="profile-tag">Online Now</div>
+        <span class="profile-btn">View Profile</span>
+      </a>
+
+      <a href="/dating/lauren/" class="profile-card">
+        <div class="profile-avatar">🌸</div>
+        <div class="profile-name">Lauren</div>
+        <div class="profile-tag">Online Now</div>
+        <span class="profile-btn">View Profile</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" style="display:flex;align-items:center;gap:2px;margin-left:-22px;margin-bottom:-20px;">
+        <img src="../assets/images/real-girls/logo.jpeg" alt="" width="72" height="72" style="flex-shrink:0;mix-blend-mode:screen;filter:brightness(1.3) saturate(1.5) contrast(1.1);object-fit:contain;margin-right:-18px;">
+        <span style="white-space:nowrap;background:linear-gradient(90deg,#ff2d78,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;position:relative;top:4px;">Strippers Worldwide</span>
+      </a>
+      <p>Your all-in-one hub for Live Cams, Dating,<br>AI Girls, VIP access and lots more.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="/ai-girls/">AI Girls</a>
+      <a href="/live-cams/">Live Cams</a>
+      <a href="/dating/">Dating</a>
+      <a href="/offers/">Hot Offers</a>
+      <a href="/models/">VIP Models</a>
+      <a href="/trending/">Trending</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal &amp; Info</h4>
+      <a href="/blog/">Blog</a>
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/terms-of-service/">Terms of Use</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 StrippersWorldwide.com. All rights reserved.</span>
+    <span>This site links to adult entertainment networks and is intended for adults aged 18 and over only. We do not host adult content directly. All models are 18+.</span>
+  </div>
+</footer>
+
+</div><!-- end page-body -->
+
+<script src="../mobile-nav.js"></script>
+<script src="../email-popup.js"></script>
+<script>
+  document.querySelectorAll('.cat-tab').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.cat-tab').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
