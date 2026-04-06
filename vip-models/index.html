@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dating | Strippers Worldwide.com</title>
+<meta name="description" content="Connect and date real performers worldwide. Meet local strippers, chat privately, and find genuine connections anytime.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+  section { padding: 70px 20px; }
+  .container { max-width: 960px; margin: 0 auto; }
+
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes pulseGlow { 0%,100% { box-shadow: 0 0 8px rgba(255,32,82,0.3); } 50% { box-shadow: 0 0 22px rgba(255,32,82,0.6); } }
+  .cta-group { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; position: relative; z-index: 1; }
+
+  /* ── QUIZ ── */
+  .quiz-section { position: relative; min-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; overflow: hidden; }
+  .quiz-bg { position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,32,82,0.18) 0%, transparent 65%),
+                radial-gradient(ellipse 60% 50% at 80% 80%, rgba(155,48,255,0.14) 0%, transparent 60%); }
+  .quiz-bg::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255,255,255,0.02) 60px), repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255,255,255,0.01) 60px); }
+  .quiz-wrap { position: relative; z-index: 1; width: 100%; max-width: 600px; }
+  .quiz-progress-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; text-align: center; }
+  .quiz-progress-bar { width: 100%; height: 4px; background: var(--border); border-radius: 4px; margin-bottom: 36px; overflow: hidden; }
+  .quiz-progress-fill { height: 100%; background: linear-gradient(90deg, var(--red), var(--purple)); border-radius: 4px; transition: width 0.4s ease; }
+  .quiz-step { display: none; animation: fadeSlide 0.35s ease; }
+  .quiz-step.active { display: block; }
+  @keyframes fadeSlide { from { opacity: 0; transform: translateX(24px); } to { opacity: 1; transform: translateX(0); } }
+  .quiz-q { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 5vw, 2.8rem); letter-spacing: 1px; line-height: 1.1; margin-bottom: 28px; text-align: center; }
+  .quiz-options { display: flex; flex-direction: column; gap: 12px; }
+  .quiz-opt { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 22px; font-size: 0.97rem; font-weight: 600; color: var(--text); cursor: pointer; text-align: left; transition: border-color 0.2s, background 0.2s, transform 0.15s; }
+  .quiz-opt:hover { border-color: var(--purple); background: rgba(155,48,255,0.08); transform: translateX(4px); }
+  .quiz-opt.selected { border-color: var(--red); background: rgba(255,32,82,0.1); }
+
+  /* ── RESULTS ── */
+  .quiz-result { display: none; text-align: center; animation: fadeSlide 0.4s ease; }
+  .quiz-result.active { display: block; }
+  .result-icon { font-size: 3rem; margin-bottom: 20px; }
+  .result-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,32,82,0.12); border: 1px solid rgba(255,32,82,0.35); border-radius: 30px; padding: 7px 18px; font-size: 0.82rem; font-weight: 700; color: var(--text); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; animation: pulseGlow 2.5s ease-in-out infinite; }
+  .result-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: blink 1.2s step-start infinite; }
+  .result-h { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 7vw, 4rem); letter-spacing: 2px; line-height: 1.05; margin-bottom: 18px; }
+  .result-h span { background: linear-gradient(90deg, var(--red), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .result-p { color: var(--muted); font-size: 1rem; line-height: 1.75; max-width: 480px; margin: 0 auto 36px; }
+
+  /* ── FINAL CTA ── */
+  .final-cta { text-align: center; background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(255,32,82,0.1) 0%, transparent 70%); border-top: 1px solid var(--border); }
+  .final-cta h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: 2px; line-height: 1; margin-bottom: 16px; }
+  .final-cta p { color: var(--muted); margin-bottom: 40px; font-size: 1rem; }
+
+  @media (max-width: 480px) { .cta-group { flex-direction: column; align-items: center; } .btn-primary, .btn-secondary { width: 100%; max-width: 320px; text-align: center; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo">
+    <img src="/assets/images/real-girls/logo.jpeg" alt="" width="72" height="72" style="flex-shrink:0;mix-blend-mode:screen;filter:brightness(1.3) saturate(1.5) contrast(1.1) ;object-fit:contain;margin-right:-4px;">
+    <span style="white-space:nowrap;background:linear-gradient(90deg,#ff2d78,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;">Strippers Worldwide</span>
+  </a>
+  <div class="nav-links">
+    <a href="/ai-girls/" class="nav-pill">AI Girls</a>
+    <a href="/live-cams/" class="nav-pill">Live Cams</a>
+    <a href="/dating/" class="nav-pill">Dating</a>
+    <a href="/offers/" class="nav-pill">Hot Offers</a>
+    <a href="/models/" class="nav-pill gold">⭐ VIP Models</a>
+    <a href="#AFFILIATE_LINK" class="nav-cta" style="background:#ff2d78;color:#fff;">Get Access</a>
+  </div>
+  <button class="sw-burger" id="sw-burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="sw-dropdown" id="sw-dropdown">
+  <a href="/ai-girls/">AI Girls</a>
+  <a href="/live-cams/">Live Cams</a>
+  <a href="/dating/">Dating</a>
+  <a href="/offers/">Hot Offers</a>
+  <a href="/models/">⭐ VIP Models</a>
+  <a href="#AFFILIATE_LINK" class="sw-drop-cta">Get Access</a>
+</div>
+
+<script>
+(function(){
+  var burger = document.getElementById('sw-burger');
+  var dropdown = document.getElementById('sw-dropdown');
+  burger.addEventListener('click', function(e){
+    e.stopPropagation();
+    burger.classList.toggle('open');
+    dropdown.classList.toggle('open');
+  });
+  document.addEventListener('click', function(e){
+    if(!burger.contains(e.target) && !dropdown.contains(e.target)){
+      burger.classList.remove('open');
+      dropdown.classList.remove('open');
+    }
+  });
+  dropdown.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      burger.classList.remove('open');
+      dropdown.classList.remove('open');
+    });
+  });
+})();
+</script>
+
+<div class="page-body">
+<!-- QUIZ -->
+<section class="quiz-section">
+  <div class="quiz-bg"></div>
+  <div class="quiz-wrap">
+
+    <!-- Icon -->
+    <div style="text-align:center;margin-bottom:28px;">
+      <svg width="72" height="68" viewBox="0 0 72 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Left half of heart (blue) -->
+        <path d="M36 64C36 64 4 44 4 22C4 12.06 12.06 4 22 4C28.2 4 33.7 7.1 36 12C36 12 36 64 36 64Z" fill="#4DC8F0"/>
+        <!-- Right half of heart (pink) -->
+        <path d="M36 64C36 64 68 44 68 22C68 12.06 59.94 4 50 4C43.8 4 38.3 7.1 36 12C36 12 36 64 36 64Z" fill="#F0567A"/>
+        <!-- Cupid arrow diagonally across heart -->
+        <!-- Arrow shaft -->
+        <line x1="18" y1="50" x2="56" y2="14" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+        <!-- Arrowhead (right/top) -->
+        <polygon points="56,14 46,16 54,24" fill="white" opacity="0.9"/>
+        <!-- Tail feathers (left/bottom) -->
+        <line x1="18" y1="50" x2="12" y2="44" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+        <line x1="18" y1="50" x2="14" y2="56" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+      </svg>
+    </div>
+
+    <!-- Progress -->
+    <div id="quiz-progress-label" class="quiz-progress-label">🔥 Flirty Match · Question 1 of 5</div>
+    <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quiz-fill" style="width:20%;"></div></div>
+
+    <!-- Q1 -->
+    <div class="quiz-step active" id="step-1">
+      <div class="quiz-q" style="white-space:nowrap;font-size:clamp(1.2rem,3.5vw,2.2rem);">What kind of vibe are you in right now? 🔥</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="nextStep(1)">💬 Just someone to talk to… nothing serious 😉</button>
+        <button class="quiz-opt" onclick="nextStep(1)">😏 Playful and a little flirty 💋</button>
+        <button class="quiz-opt" onclick="nextStep(1)">🤔 Curious… let's see where it goes ✨</button>
+        <button class="quiz-opt" onclick="nextStep(1)">🔥 I want something exciting tonight 😈</button>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="quiz-step" id="step-2">
+      <div class="quiz-q">When do you feel most… in the mood to connect?</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="nextStep(2)">🌙 Late nights hit different 🥂</button>
+        <button class="quiz-opt" onclick="nextStep(2)">☀️ Random moments during the day 💭</button>
+        <button class="quiz-opt" onclick="nextStep(2)">⚡ Anytime… if the vibe is right 😏</button>
+        <button class="quiz-opt" onclick="nextStep(2)">😈 When I'm bored and want something fun 🎲</button>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="quiz-step" id="step-3">
+      <div class="quiz-q">What type of energy attracts you most?</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="nextStep(3)">🤗 Sweet and easygoing 🌸</button>
+        <button class="quiz-opt" onclick="nextStep(3)">😜 Teasing and playful 💦</button>
+        <button class="quiz-opt" onclick="nextStep(3)">💪 Confident and a little bold 🔥</button>
+        <button class="quiz-opt" onclick="nextStep(3)">🖤 Mysterious… keeps me guessing 🌙</button>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="quiz-step" id="step-4">
+      <div class="quiz-q">How fast do you like things to happen?</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="nextStep(4)">😈 Instantly… I don't like waiting ⚡</button>
+        <button class="quiz-opt" onclick="nextStep(4)">⚡ Pretty quick if the vibe is there 😏</button>
+        <button class="quiz-opt" onclick="nextStep(4)">💭 I like a little build-up 🔥</button>
+        <button class="quiz-opt" onclick="nextStep(4)">🌊 Slow at first… then see where it goes 😌</button>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="quiz-step" id="step-5">
+      <div class="quiz-q">What are you really looking for?</div>
+      <div class="quiz-options">
+        <button class="quiz-opt" onclick="showResult()">👤 Someone real to chat with 💬</button>
+        <button class="quiz-opt" onclick="showResult()">😏 Fun, flirty conversations 💋</button>
+        <button class="quiz-opt" onclick="showResult()">💞 A connection that could turn into more 🌹</button>
+        <button class="quiz-opt" onclick="showResult()">🔥 Something exciting I won't forget 😈</button>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div class="quiz-result" id="quiz-result">
+      <div class="result-badge"><div class="result-dot"></div> Match Found</div>
+      <div class="result-h">Your Perfect Match<br><span>Is Waiting…</span></div>
+      <p class="result-p">We've found people online right now who match exactly what you're looking for. They're ready to chat instantly.</p>
+      <div class="cta-group" style="justify-content:center;">
+        <a href="#AFFILIATE_LINK" class="btn-primary" style="font-size:1.05rem;padding:18px 42px;">👉 Start Connecting Now</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function nextStep(current) {
+  document.getElementById('step-' + current).classList.remove('active');
+  var next = current + 1;
+  document.getElementById('step-' + next).classList.add('active');
+  var pct = (next / 5) * 100;
+  document.getElementById('quiz-fill').style.width = pct + '%';
+  document.getElementById('quiz-progress-label').textContent = '🔥 Flirty Match · Question ' + next + ' of 5';
+}
+function showResult() {
+  document.getElementById('step-5').classList.remove('active');
+  document.getElementById('quiz-fill').style.width = '100%';
+  document.getElementById('quiz-progress-label').textContent = 'Your Results';
+  document.getElementById('quiz-result').classList.add('active');
+}
+</script>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Ready To Meet Someone?</h2>
+    <p>Thousands of real performers are active right now. Find yours.</p>
+    <div class="cta-group">
+      <a href="#AFFILIATE_LINK" class="btn-primary">💋 Find A Date Now</a>
+      <a href="#AFFILIATE_LINK" class="btn-secondary">Browse All Profiles</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" style="display:flex;align-items:center;gap:2px;margin-left:-22px;margin-bottom:-20px;"><img src="/assets/images/real-girls/logo.jpeg" alt="" width="72" height="72" style="flex-shrink:0;mix-blend-mode:screen;filter:brightness(1.3) saturate(1.5) contrast(1.1) ;object-fit:contain;margin-right:-18px;"><span style="white-space:nowrap;background:linear-gradient(90deg,#ff2d78,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;position:relative;top:4px;">Strippers Worldwide</span></a>
+      <p>Your all-in-one hub for Live Cams, Dating,<br>AI Girls, VIP access and lots more. Built for instant connection and real interaction.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="/ai-girls/">AI Girls</a>
+      <a href="/live-cams/">Live Cams</a>
+      <a href="/dating/">Dating</a>
+      <a href="/offers/">Hot Offers</a>
+      <a href="/models/">VIP Models</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal &amp; Info</h4>
+      <a href="/blog/">Blog</a>
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/terms-of-service/">Terms of Use</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 StrippersWorldwide.com. All rights reserved.</span>
+    <span>This site links to adult entertainment networks and is intended for adults aged 18 and over only. We do not host adult content directly. All models are 18+.</span>
+  </div>
+</footer>
+
+<script src="/mobile-nav.js"></script>
+</body>
+</html>

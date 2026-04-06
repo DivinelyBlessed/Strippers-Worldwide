@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Strippers Worldwide.com</title>
+<meta name="description" content="Contact Strippers Worldwide.com — support, privacy requests, model enquiries and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+  /* ── Page-specific: contact layout, channels, form, FAQ ── */
+  .page-hero-bg {
+    background:
+      radial-gradient(ellipse 70% 80% at 50% 0%, rgba(155,48,255,0.2) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 50% at 80% 90%, rgba(255,32,82,0.1) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 10% 80%, rgba(26,214,255,0.08) 0%, transparent 55%);
+  }
+
+  /* Contact outer wrapper */
+  .contact-outer { max-width: 960px; margin: 0 auto; padding: 60px 20px 80px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 48px; align-items: start; }
+  @media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; } }
+
+  /* Left info panel */
+  .contact-info h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 5vw, 2.8rem); letter-spacing: 1px; line-height: 1.1; margin-bottom: 14px; }
+  .contact-info h2 span { background: linear-gradient(90deg, var(--red), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .contact-info > p { color: var(--muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 28px; }
+
+  .contact-channels { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+  .contact-channel { display: flex; align-items: flex-start; gap: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: border-color 0.25s, transform 0.25s; }
+  .contact-channel:hover { border-color: var(--purple); transform: translateX(4px); }
+  .ch-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; background: linear-gradient(135deg, rgba(155,48,255,0.2), rgba(255,32,82,0.1)); border: 1px solid rgba(155,48,255,0.2); }
+  .ch-body h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text); margin-bottom: 3px; }
+  .ch-body p { font-size: 0.85rem; color: var(--muted); margin: 0; }
+  .ch-body a { color: var(--blue); text-decoration: none; font-weight: 600; font-size: 0.88rem; }
+  .ch-body a:hover { text-decoration: underline; }
+  .ch-badge { font-size: 0.72rem; color: var(--muted); opacity: 0.7; display: block; margin-top: 3px; }
+
+  .privacy-note { background: rgba(155,48,255,0.07); border: 1px solid rgba(155,48,255,0.2); border-radius: 12px; padding: 16px 20px; font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+  .privacy-note strong { color: var(--purple); display: block; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; }
+
+  /* Form */
+  .contact-form-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 36px 40px; }
+  @media (max-width: 480px) { .contact-form-wrap { padding: 28px 22px; } }
+  .form-heading { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 1px; margin-bottom: 4px; }
+  .form-sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 28px; }
+
+  .form-group { margin-bottom: 18px; }
+  .form-group label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px; font-family: 'Outfit', sans-serif; font-size: 0.95rem; color: var(--text); outline: none; transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(155,48,255,0.15); }
+  .form-group textarea { height: 120px; resize: vertical; line-height: 1.65; }
+  .form-group select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239b30ff' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+  .form-group select option { background: var(--bg2); }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+
+  .consent-label { display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: var(--muted); cursor: pointer; line-height: 1.6; }
+  .consent-label input[type="checkbox"] { margin-top: 3px; accent-color: var(--purple); flex-shrink: 0; }
+  .consent-label a { color: var(--blue); }
+
+  .btn-submit { width: 100%; margin-top: 10px; background: linear-gradient(135deg, var(--red), var(--purple)); color: #fff; border: none; border-radius: 50px; padding: 15px 32px; font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.5px; cursor: pointer; box-shadow: 0 0 24px rgba(155,48,255,0.4); transition: transform 0.2s, box-shadow 0.2s; }
+  .btn-submit:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 0 40px rgba(155,48,255,0.65); }
+
+  .form-success { display: none; text-align: center; padding: 40px 16px; }
+  .form-success .s-icon { font-size: 2.5rem; margin-bottom: 14px; }
+  .form-success h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; letter-spacing: 1px; margin-bottom: 10px; }
+  .form-success h3 span { background: linear-gradient(90deg, var(--red), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .form-success p { color: var(--muted); font-size: 0.92rem; }
+  .form-success a { color: var(--blue); }
+
+  /* FAQ strip */
+  .contact-faq { max-width: 960px; margin: 0 auto; padding: 0 20px 72px; }
+  .faq-section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--purple); margin-bottom: 12px; }
+  .faq-section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: 1px; margin-bottom: 32px; }
+  .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .faq-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 26px; transition: border-color 0.25s, transform 0.25s; }
+  .faq-card:hover { border-color: var(--purple); transform: translateY(-3px); }
+  .faq-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 10px; line-height: 1.45; }
+  .faq-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+  .faq-card a { color: var(--blue); }
+  footer { background: #0a0a0c; border-top: 1px solid var(--border); padding: 32px 0 32px; }
+  .footer-grid { max-width: 100%; padding: 0 60px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+  .footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
+  .footer-brand p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; font-weight: 300; max-width: 280px; margin-left: 0; }
+  .footer-col h4 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text); margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 0.85rem; color: var(--muted); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+  .footer-col a:hover { color: #ff2d78; }
+  .footer-bottom { max-width: 100%; padding-left: 60px; padding-right: 60px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+  .footer-bottom span { font-size: 0.78rem; color: rgba(138,122,150,0.6); line-height: 1.6; }
+  @media(max-width: 700px) {
+    .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px 16px !important; padding: 0 24px !important; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { padding-left: 24px !important; padding-right: 24px !important; flex-direction: column; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" style="margin-left:-16px;">
+    <img src="/assets/images/real-girls/logo.jpeg" alt="" width="72" height="72" style="flex-shrink:0;mix-blend-mode:screen;filter:brightness(1.3) saturate(1.5) contrast(1.1) ;object-fit:contain;margin-right:-18px;">
+    <span style="white-space:nowrap;background:linear-gradient(90deg,#ff2d78,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;position:relative;top:4px;">Strippers Worldwide</span>
+  </a>
+  <div class="nav-links">
+    <a href="/ai-girls/" class="nav-pill">AI Girls</a>
+    <a href="/live-cams/" class="nav-pill">Live Cams</a>
+    <a href="/dating/" class="nav-pill">Dating</a>
+    <a href="/offers/" class="nav-pill">Hot Offers</a>
+    <a href="/models/" class="nav-pill gold">⭐ VIP Models</a>
+    <a href="https://t.mbjms.com/389314/3788/0?bo=3471,3472,3473,3474,3475&po=6456&aff_sub5=SF_006OG000004lmDN" class="nav-cta">Get Access</a>
+  </div>
+</nav>
+
+<div class="page-body">
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-label">Support</div>
+  <h1>Get In <span>Touch</span></h1>
+  <p>Support, privacy requests, model enquiries, partnerships — we're here.</p>
+</div>
+
+<div class="contact-outer">
+  <a href="/" class="back-link">← Back to Home</a>
+
+  <div class="contact-grid">
+
+    <!-- LEFT: Channels -->
+    <div class="contact-info">
+      <h2>How can we <span>help?</span></h2>
+      <p>Whether it's a platform question, a data request, or you want to get a model featured — reach out and we'll get back to you fast.</p>
+
+      <div class="contact-channels">
+        <div class="contact-channel">
+          <div class="ch-icon">✉</div>
+          <div class="ch-body">
+            <h4>General Support</h4>
+            <a href="mailto:hello@strippersworldwide.com">hello@strippersworldwide.com</a>
+            <span class="ch-badge">Response within 1–2 business days</span>
+          </div>
+        </div>
+        <div class="contact-channel">
+          <div class="ch-icon">🔒</div>
+          <div class="ch-body">
+            <h4>Privacy & Data</h4>
+            <a href="mailto:privacy@strippersworldwide.com">privacy@strippersworldwide.com</a>
+            <span class="ch-badge">Data requests fulfilled within 30 days</span>
+          </div>
+        </div>
+        <div class="contact-channel">
+          <div class="ch-icon">⚖</div>
+          <div class="ch-body">
+            <h4>Legal & Compliance</h4>
+            <a href="mailto:legal@strippersworldwide.com">legal@strippersworldwide.com</a>
+            <span class="ch-badge">Response within 5 business days</span>
+          </div>
+        </div>
+        <div class="contact-channel">
+          <div class="ch-icon">🌟</div>
+          <div class="ch-body">
+            <h4>Model & Partner Features</h4>
+            <a href="mailto:models@strippersworldwide.com">models@strippersworldwide.com</a>
+            <span class="ch-badge">Platform listings & affiliate partnerships</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="privacy-note">
+        <strong>🔒 Discretion Guaranteed</strong>
+        You don't need to use your real name. All messages are handled confidentially. We never share contact enquiries with third parties.
+      </div>
+    </div>
+
+    <!-- RIGHT: Form -->
+    <div class="contact-form-wrap">
+      <div class="form-heading">Send A Message</div>
+      <p class="form-sub">Fill in what you're comfortable sharing. Stage name is fine.</p>
+
+      <div id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name / Alias</label>
+            <input type="text" id="fName" placeholder="Your name or stage name"/>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="fEmail" placeholder="Your contact email"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Enquiry Type</label>
+          <select id="fType">
+            <option value="">— Select a topic —</option>
+            <option>Platform / Site Support</option>
+            <option>Privacy / Data Request</option>
+            <option>Model Feature / Listing</option>
+            <option>Affiliate Partnership</option>
+            <option>Content Removal Request</option>
+            <option>Legal / Compliance</option>
+            <option>Press / Media</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea id="fMsg" placeholder="Tell us what you need. We read every message."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="consent-label">
+            <input type="checkbox" id="fConsent"/>
+            I agree that Strippers Worldwide.com may use my email to respond to this enquiry. See our <a href="privacy-policy.html">Privacy Policy</a>.
+          </label>
+        </div>
+
+        <button class="btn-submit" onclick="submitForm()">Send Message →</button>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <div class="s-icon">✦</div>
+        <h3>Message <span>Received</span></h3>
+        <p>We'll be in touch soon. While you wait, why not <a href="#AFFILIATE_LINK">check who's live right now</a>?</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="contact-faq">
+  <div class="faq-section-label">Common Questions</div>
+  <div class="faq-section-title">Frequently Asked</div>
+  <div class="faq-grid">
+    <div class="faq-card">
+      <h4>Do I need to use my real name?</h4>
+      <p>No. You can use any name or alias you're comfortable with. We only need an email address to reply to your enquiry.</p>
+    </div>
+    <div class="faq-card">
+      <h4>How do I get a model featured on the site?</h4>
+      <p>Select "Model Feature / Listing" in the form above or email <a href="mailto:models@strippersworldwide.com">models@strippersworldwide.com</a> with your details.</p>
+    </div>
+    <div class="faq-card">
+      <h4>How do I request removal of my data?</h4>
+      <p>Email <a href="mailto:privacy@strippersworldwide.com">privacy@strippersworldwide.com</a> or select "Privacy / Data Request" above. We process all erasure requests within 30 days.</p>
+    </div>
+    <div class="faq-card">
+      <h4>How do I become an affiliate partner?</h4>
+      <p>Select "Affiliate Partnership" in the form above or email <a href="mailto:hello@strippersworldwide.com">hello@strippersworldwide.com</a> with your platform details.</p>
+    </div>
+    <div class="faq-card">
+      <h4>How do I request content removal?</h4>
+      <p>Select "Content Removal Request" above and provide the relevant URL and details. We take these requests seriously and act promptly.</p>
+    </div>
+    <div class="faq-card">
+      <h4>Do you work with platforms globally?</h4>
+      <p>Yes — we work with partner platforms across North America, Europe, Asia-Pacific, and beyond. Tell us your region and we'll discuss options.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" style="display:flex;align-items:center;gap:2px;margin-left:-22px;margin-bottom:-20px;"><img src="/assets/images/real-girls/logo.jpeg" alt="" width="72" height="72" style="flex-shrink:0;mix-blend-mode:screen;filter:brightness(1.3) saturate(1.5) contrast(1.1) ;object-fit:contain;margin-right:-18px;"><span style="white-space:nowrap;background:linear-gradient(90deg,#ff2d78,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;position:relative;top:4px;">Strippers Worldwide</span></a>
+      <p>Your all-in-one hub for Live Cams, Dating,<br>AI Girls, VIP access and lots more. Built for instant connection and real interaction.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="/ai-girls/">AI Girls</a>
+      <a href="/live-cams/">Live Cams</a>
+      <a href="/dating/">Dating</a>
+      <a href="/offers/">Hot Offers</a>
+      <a href="/models/">VIP Models</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal &amp; Info</h4>
+      <a href="/blog/">Blog</a>
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/terms-of-service/">Terms of Use</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 StrippersWorldwide.com. All rights reserved.</span>
+    <span>This site links to adult entertainment networks and is intended for adults aged 18 and over only. We do not host adult content directly. All models are 18+.</span>
+  </div>
+</footer>
+
+<script src="../shared.js"></script>
+<script src="/mobile-nav.js"></script>
+</body>
+</html>

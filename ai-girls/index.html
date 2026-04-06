@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Girls | Strippers Worldwide.com</title>
+<meta name="description" content="Chat with stunning AI companions 24/7. Always available, endlessly engaging, completely private. Your perfect AI girlfriend experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+
+<style>
+
+  html, body { background: #0a0a0c !important; overscroll-behavior-y: none; }
+  .page-body { background: #0a0a0c; }
+  .funnel-section { background: #0a0a0c; }
+  .final-cta { background-color: #0a0a0c; }
+
+  /* ── PAGE ACCENT: cyan-dominant ── */
+  :root {
+    --ai: #1ad6ff;
+    --ai2: #0aa8cc;
+    --ai-glow: rgba(26,214,255,0.45);
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 70px 20px; }
+  .container { max-width: 960px; margin: 0 auto; }
+  .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--ai); margin-bottom: 12px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 6vw, 3.2rem); letter-spacing: 1px; line-height: 1.1; margin-bottom: 10px; }
+  .section-sub { color: var(--muted); font-size: 0.95rem; margin-bottom: 48px; }
+
+  /* ── HERO ── */
+  .hero { position: relative; min-height: 0; height: 580px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 20px 60px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0;
+    background:
+      linear-gradient(to bottom, rgba(10,10,12,0.5) 0%, rgba(10,10,12,0.72) 100%),
+      url('../assets/images/headers/girl-blowing-kiss.png') center center / cover no-repeat;
+  }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(255,255,255,0.025) 60px), repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255,255,255,0.015) 60px); }
+
+  /* Floating particles */
+  .hero-particles { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+  .particle { position: absolute; border-radius: 50%; animation: drift linear infinite; opacity: 0; }
+  @keyframes drift { 0% { transform: translateY(100vh) scale(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 0.6; } 100% { transform: translateY(-20px) scale(1); opacity: 0; } }
+
+  .ai-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(26,214,255,0.12); border: 1px solid rgba(26,214,255,0.4); border-radius: 30px; padding: 7px 18px; font-size: 0.82rem; font-weight: 700; color: var(--text); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; position: relative; z-index: 1; animation: pulseBlue 2.5s ease-in-out infinite; }
+  .ai-pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--ai); animation: blink 1.8s ease-in-out infinite; box-shadow: 0 0 8px var(--ai); }
+  @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.3;transform:scale(1.4)} }
+  @keyframes pulseBlue { 0%,100%{box-shadow:0 0 8px rgba(26,214,255,0.25)} 50%{box-shadow:0 0 24px rgba(26,214,255,0.6)} }
+
+  .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.05; letter-spacing: 2px; max-width: 820px; position: relative; z-index: 1; margin-bottom: 12px; }
+  .hero h1 span { background: linear-gradient(90deg, var(--ai), var(--purple), var(--red)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero-sub { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1rem, 2.5vw, 1.6rem); letter-spacing: 3px; background: linear-gradient(90deg, var(--ai), #a0eeff, var(--ai)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0 auto 14px; position: relative; z-index: 1; }
+  .hero p { font-size: clamp(0.88rem, 1.8vw, 0.95rem); color: var(--muted); max-width: 520px; margin: 0 auto 24px; position: relative; z-index: 1; }
+  .cta-group { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; position: relative; z-index: 1; }
+
+
+  .scroll-hint { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 0.72rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; z-index: 1; animation: float 2s ease-in-out infinite; }
+  @keyframes float { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+  .scroll-hint::after { content: ''; width: 1px; height: 32px; background: linear-gradient(to bottom, var(--muted), transparent); }
+
+  /* ── TICKER ── */
+  .stats-bar { background: #111116; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 18px 20px; overflow: hidden; }
+  .ticker { display: flex; width: max-content; animation: ticker-scroll 40s linear infinite; }
+  .stats-bar:hover .ticker { animation-play-state: paused; }
+  @keyframes ticker-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+  .ticker-item { white-space: nowrap; padding: 0 44px; font-size: 0.82rem; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 10px; }
+  .ticker-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ai); display: inline-block; flex-shrink: 0; box-shadow: 0 0 6px var(--ai); }
+
+  /* ── AI PERSONA GRID ── */
+  .personas-section { background: #111116; }
+  .persona-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 16px; }
+  .persona-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; cursor: pointer; transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; position: relative; }
+  .persona-card:hover { transform: translateY(-6px); border-color: var(--ai); box-shadow: 0 0 28px rgba(26,214,255,0.2); }
+  .persona-img { width: 100%; aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; font-size: 3.5rem; position: relative; overflow: hidden; }
+  .persona-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 50%); }
+  .ai-tag { position: absolute; top: 10px; left: 10px; background: rgba(26,214,255,0.18); border: 1px solid rgba(26,214,255,0.5); color: var(--ai); font-size: 0.6rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; z-index: 2; }
+  .persona-info { padding: 14px 14px 16px; }
+  .persona-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.05rem; letter-spacing: 1px; color: var(--text); margin-bottom: 3px; }
+  .persona-type { font-size: 0.72rem; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+  .persona-traits { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+  .trait { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.5px; padding: 3px 8px; border-radius: 20px; background: rgba(26,214,255,0.1); border: 1px solid rgba(26,214,255,0.2); color: var(--ai); }
+  .persona-btn { display: block; width: 100%; background: linear-gradient(135deg, var(--ai), var(--purple)); color: #fff; text-align: center; text-decoration: none; padding: 9px 0; border-radius: 8px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.5px; border: none; cursor: pointer; transition: opacity 0.2s, box-shadow 0.2s; }
+  .persona-btn:hover { opacity: 0.88; box-shadow: 0 0 16px rgba(26,214,255,0.5); }
+
+  /* ── CHAT DEMO ── */
+  .chat-demo-wrap { max-width: 520px; margin: 0 auto; background: var(--card); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; box-shadow: 0 0 60px rgba(26,214,255,0.12); }
+  .chat-header { display: flex; align-items: center; gap: 12px; padding: 16px 20px; background: rgba(26,214,255,0.06); border-bottom: 1px solid var(--border); }
+  .chat-avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--ai), var(--purple)); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; box-shadow: 0 0 12px rgba(26,214,255,0.4); }
+  .chat-header-info h4 { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+  .chat-header-info span { font-size: 0.72rem; color: var(--ai); font-weight: 600; letter-spacing: 1px; display: flex; align-items: center; gap: 5px; }
+  .chat-header-info span::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--ai); display: inline-block; box-shadow: 0 0 6px var(--ai); animation: blink 1.8s ease-in-out infinite; }
+  .chat-messages { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+  .msg { max-width: 78%; display: flex; flex-direction: column; gap: 4px; }
+  .msg.ai { align-self: flex-start; }
+  .msg.user { align-self: flex-end; align-items: flex-end; }
+  .msg-bubble { padding: 11px 15px; border-radius: 16px; font-size: 0.88rem; line-height: 1.55; }
+  .msg.ai .msg-bubble { background: rgba(26,214,255,0.1); border: 1px solid rgba(26,214,255,0.2); color: var(--text); border-bottom-left-radius: 4px; }
+  .msg.user .msg-bubble { background: linear-gradient(135deg, var(--purple), var(--red)); color: #fff; border-bottom-right-radius: 4px; }
+  .msg-time { font-size: 0.65rem; color: var(--muted); padding: 0 4px; }
+  .chat-input-row { display: flex; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--border); background: rgba(26,214,255,0.03); }
+  .chat-input-fake { flex: 1; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 30px; padding: 10px 18px; font-size: 0.85rem; color: var(--muted); }
+  .chat-send { background: linear-gradient(135deg, var(--ai), var(--purple)); border: none; border-radius: 30px; padding: 10px 18px; color: #fff; font-size: 0.85rem; font-weight: 700; cursor: pointer; white-space: nowrap; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 0 12px rgba(26,214,255,0.35); }
+  .chat-send:hover { transform: scale(1.05); box-shadow: 0 0 22px rgba(26,214,255,0.6); }
+  .typing-indicator { display: flex; align-items: center; gap: 4px; padding: 10px 14px; background: rgba(26,214,255,0.08); border: 1px solid rgba(26,214,255,0.15); border-radius: 16px; border-bottom-left-radius: 4px; width: fit-content; }
+  .typing-indicator span { width: 6px; height: 6px; border-radius: 50%; background: var(--ai); animation: typingDot 1.2s ease-in-out infinite; }
+  .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+  .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes typingDot { 0%,60%,100%{transform:translateY(0);opacity:0.4} 30%{transform:translateY(-5px);opacity:1} }
+
+  /* ── SPLIT SECTION ── */
+  .split-section { border-bottom: 1px solid var(--border); }
+  .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  @media (max-width: 640px) { .split-grid { grid-template-columns: 1fr; } .split-grid .img-col { order: -1; } }
+  .split-img { position: relative; }
+  .split-img-inner { aspect-ratio: 4/5; border-radius: 20px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+  .inner-glow { position: absolute; inset: 0; }
+  .placeholder { text-align: center; position: relative; z-index: 1; }
+  .placeholder span { font-size: 4rem; display: block; margin-bottom: 12px; }
+  .placeholder p { color: var(--muted); font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+  .placeholder small { color: var(--border); font-size: 0.72rem; margin-top: 4px; display: block; }
+  .corner-accent { position: absolute; width: 48px; height: 48px; border-radius: 12px; opacity: 0.6; }
+  .split-content p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 18px; }
+
+  /* ── BENEFITS / FEATURES ── */
+  .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; }
+  .benefit-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px 24px; transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s; }
+  .benefit-card:hover { border-color: var(--ai); transform: translateY(-4px); box-shadow: 0 0 24px rgba(26,214,255,0.1); }
+  .benefit-icon { width: 52px; height: 52px; margin: 0 auto 18px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, rgba(26,214,255,0.15), rgba(155,48,255,0.1)); border: 1px solid rgba(26,214,255,0.25); border-radius: 14px; font-size: 1.5rem; }
+  .benefit-card { text-align: center; }
+  .benefit-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+  .benefit-card p { color: var(--muted); font-size: 0.88rem; }
+
+  /* ── HOW IT WORKS ── */
+  .steps-section { background: #111116; }
+  .steps { display: flex; flex-direction: column; gap: 0; max-width: 520px; }
+  .step { display: flex; gap: 20px; align-items: flex-start; position: relative; }
+  .step:not(:last-child)::after { content: ''; position: absolute; left: 22px; top: 52px; width: 2px; height: calc(100% - 10px); background: linear-gradient(to bottom, var(--ai), transparent); }
+  .step-num { flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; background: linear-gradient(135deg, var(--ai), var(--purple)); box-shadow: 0 0 18px rgba(26,214,255,0.4); position: relative; z-index: 1; color: #000; }
+  .step-body { padding-bottom: 36px; }
+  .step-body h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+  .step-body p { color: var(--muted); font-size: 0.88rem; }
+
+  /* ── COMPARE TABLE ── */
+  .compare-table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .compare-table th { font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+  .compare-table th:not(:first-child) { text-align: center; }
+  .compare-table td { padding: 14px 16px; font-size: 0.9rem; color: var(--muted); border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .compare-table td:not(:first-child) { text-align: center; font-size: 1.1rem; }
+  .compare-table td:first-child { color: var(--text); font-weight: 600; }
+  .compare-table td.yes { color: var(--ai); }
+  .compare-table td.no { color: #444; }
+  .compare-table td.partial { color: var(--purple); }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table .col-ai { background: rgba(26,214,255,0.04); }
+  .compare-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+  .col-header-ai { color: var(--ai) !important; }
+
+  /* ── CTA BAR ── */
+  .cta-bar { background: linear-gradient(90deg, rgba(26,214,255,0.1), rgba(155,48,255,0.1)); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 28px 20px; text-align: center; }
+  .cta-bar p { color: var(--muted); font-size: 0.88rem; margin-bottom: 16px; }
+
+  /* ── FINAL CTA ── */
+  .final-cta { text-align: center; background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(26,214,255,0.1) 0%, transparent 70%); border-top: 1px solid var(--border); }
+  .final-cta h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: 2px; line-height: 1; margin-bottom: 16px; }
+  .final-cta p { color: var(--muted); margin-bottom: 40px; font-size: 1rem; }
+
+  @media (max-width: 768px) {
+    .nav-logo { margin-left: -36px !important; }
+    .nav-logo img { margin-right: -20px !important; }
+    .cta-group { flex-direction: column; align-items: center; }
+    .cta-group .btn-primary, .cta-group .btn-secondary { width: 100%; max-width: 280px; text-align: center; }
+
+    /* Headline blocks */
+    div[style*="background:#0a0a0c"] { padding: 40px 20px 28px !important; text-align: center !important; }
+    div[style*="background:#0a0a0c"] h2 { font-size: 7.5vw !important; white-space: normal !important; }
+
+    /* Funnel sections — stack & center */
+    .funnel-section { padding: 48px 20px; }
+    .split-grid { grid-template-columns: 1fr !important; gap: 32px !important; text-align: center; }
+    .split-grid .img-col { display: none; }
+    .split-grid h2, .split-grid p, .split-grid div { text-align: center !important; }
+    .funnel-h { font-size: clamp(1.6rem, 7vw, 2.4rem) !important; white-space: normal !important; }
+    .funnel-p { font-size: 0.95rem; }
+    .split-grid > div { display: flex; flex-direction: column; align-items: center; }
+    .proof-link { justify-content: center; }
+
+    /* Chat demo */
+    .chat-demo-wrap { max-width: 100%; }
+
+    /* Benefits grid */
+    .benefits-grid { grid-template-columns: 1fr !important; }
+    .benefit-card { text-align: center; }
+
+    /* Final CTA */
+    .final-cta h2 { font-size: clamp(2rem, 10vw, 3.5rem); }
+  }
+
+  /* ── FUNNEL SECTIONS ── */
+  .funnel-section { padding: 72px 20px; border-bottom: 1px solid var(--border); }
+  .funnel-section.dark { background: #111116; }
+  .funnel-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+  .funnel-inner.left { text-align: left; }
+  .funnel-h { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 6vw, 3.4rem); letter-spacing: 1.5px; line-height: 1.05; margin-bottom: 22px; color: var(--text); }
+  .funnel-h span { background: linear-gradient(90deg, var(--ai), var(--purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .funnel-p { font-size: 1.05rem; color: var(--muted); line-height: 1.95; margin-bottom: 18px; }
+  .funnel-p strong { color: var(--text); }
+  .funnel-p.accent { color: var(--text); font-weight: 600; font-size: 1.1rem; }
+  .proof-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.72rem; color: var(--muted); text-decoration: none; letter-spacing: 1px; opacity: 0.6; transition: opacity 0.2s; margin-top: 10px; }
+  .proof-link:hover { opacity: 1; color: var(--ai); }
+  .proof-link::before { content: '✓'; color: var(--ai); font-size: 0.7rem; }
+  .funnel-cta-wrap { margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .funnel-cta-wrap .cta-group { justify-content: center; }
+
+  /* ── STICKY CTA ── */
+  .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; padding: 14px 20px; background: rgba(10,10,12,0.96); backdrop-filter: blur(12px); border-top: 1px solid rgba(26,214,255,0.2); display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+  .sticky-cta p { font-size: 0.82rem; color: var(--muted); margin: 0; }
+  .sticky-cta a { white-space: nowrap; flex-shrink: 0; background: linear-gradient(135deg, var(--ai), var(--purple)); color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 50px; font-size: 0.9rem; font-weight: 700; box-shadow: 0 0 20px rgba(26,214,255,0.4); transition: transform 0.2s, box-shadow 0.2s; }
+  .sticky-cta a:hover { transform: scale(1.04); box-shadow: 0 0 32px rgba(26,214,255,0.65); }
+  @media (max-width: 540px) { .sticky-cta { flex-direction: column; text-align: center; } .sticky-cta a { width: 100%; text-align: center; } }
+
+  /* ── FLOW TEXT ── */
+  @keyframes bgPulse { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  .flow-bg-wrap { width: 100vw; position: relative; left: 50%; transform: translateX(-50%); overflow: hidden; padding: 28px 0 8px; background: linear-gradient(120deg, #0a0a0c, #0d0818, #0a1a2e, #0a0a0c); background-size: 300% 300%; animation: bgPulse 8s ease infinite; }
+  .flow-text { font-family: 'Bebas Neue', sans-serif; font-size: 5.8vw; white-space: nowrap; letter-spacing: 2px; line-height: 1; margin: 0; padding: 0 2vw; background: linear-gradient(90deg, var(--ai), var(--purple)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+  /* ── IMAGE SCROLL STRIP ── */
+  .img-scroll-bar { background: #111116; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 0; overflow: hidden; }
+  .img-scroll-track { display: flex; gap: 16px; padding: 0 16px; width: max-content; will-change: transform; animation: img-scroll 80s linear infinite; }
+  @keyframes img-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .img-scroll-card { flex-shrink: 0; width: 280px; height: 400px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: #111116; }
+  .img-scroll-card img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; user-select: none; }
+  .img-placeholder { width: 100%; height: 100%; background: linear-gradient(160deg, #1a1a28, #111116); display: flex; align-items: center; justify-content: center; position: relative; }
+  .img-placeholder::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(26,214,255,0.07) 0%, transparent 70%); }
+  footer { background: #0a0a0c; border-top: 1px solid var(--border); padding: 32px 0 32px; }
+  .footer-grid { max-width: 100%; padding: 0 60px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+  .footer-brand { display: flex; flex-direction: column; align-items: flex-start; }
+  .footer-brand p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; font-weight: 300; max-width: 280px; margin-left: 0; }
+  .footer-col h4 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text); margin-bottom: 16px; }
+  .footer-col a { display: block; font-size: 0.85rem; color: var(--muted); text-decoration: none; margin-bottom: 10px; transition: color 0.2s; }
+  .footer-col a:hover { color: #ff2d78; }
+  .footer-bottom { max-width: 100%; padding-left: 60px; padding-right: 60px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+  .footer-bottom span { font-size: 0.78rem; color: rgba(138,122,150,0.6); line-height: 1.6; }
+  @media(max-width: 700px) {
+    .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 24px 16px !important; padding: 0 24px !important; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { padding-left: 24px !important; padding-right: 24px !important; flex-direction: column; gap: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" style="margin-left:-16px;">
+    <img src="/assets/images/real-girls/logo.jpeg" alt="" width="72" height="72" style="flex-shrink:0;mix-blend-mode:screen;filter:brightness(1.3) saturate(1.5) contrast(1.1) ;object-fit:contain;margin-right:-18px;">
+    <span style="white-space:nowrap;background:linear-gradient(90deg,#ff2d78,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;position:relative;top:4px;">Strippers Worldwide</span>
+  </a>
+  <div class="nav-links">
+    <a href="/ai-girls/" class="nav-pill">AI Girls</a>
+    <a href="/live-cams/" class="nav-pill">Live Cams</a>
+    <a href="/dating/" class="nav-pill">Dating</a>
+    <a href="/offers/" class="nav-pill">Hot Offers</a>
+    <a href="/models/" class="nav-pill gold">⭐ VIP Models</a>
+    <a href="https://t.mbjms.com/389314/3788/0?bo=3471,3472,3473,3474,3475&po=6456&aff_sub5=SF_006OG000004lmDN" class="nav-cta">Get Access</a>
+  </div>
+</nav>
+
+<div class="page-body">
+
+
+
+<!-- MARQUEE HEADLINE -->
+<div style="background:#0a0a0c;padding:60px 24px 48px;text-align:center;">
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:5.8vw;letter-spacing:2px;line-height:1;text-transform:uppercase;white-space:nowrap;background:linear-gradient(90deg,#1ad6ff 0%,#9b5fe8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:32px;">Uninterrupted Flow Exactly How You Want It</h2>
+  <a href="#AFFILIATE_LINK" class="btn-primary" style="font-size:1rem;padding:14px 36px;">Start Chatting Now</a>
+</div>
+
+<!-- IMAGE SCROLL -->
+<div class="img-scroll-bar">
+  <div class="img-scroll-track" id="img-track">
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_4093.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_1033.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_8002.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_2861.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_964.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_5003.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_689.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_8006.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_4347.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_3982.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_1021.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_7623.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_1018.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <!-- duplicates for seamless loop -->
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_4093.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_1033.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_8002.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_2861.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_964.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_5003.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_689.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_8006.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_4347.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_3982.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_1021.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_7623.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+    <div class="img-scroll-card"><img src="/assets/images/AI-girls-page-image/videoframe_1018.png" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+  </div>
+</div>
+
+<!-- SOCIAL PROOF STATS -->
+<div style="background:#111116;border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06);padding:28px 40px;display:flex;justify-content:center;gap:0;flex-wrap:wrap;">
+  <div style="display:flex;flex-direction:column;align-items:center;padding:0 36px;border-right:1px solid rgba(255,255,255,0.08);">
+    <span style="font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;background:linear-gradient(90deg,#1ad6ff,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">5M+</span>
+    <span style="font-size:0.75rem;color:rgba(200,185,215,0.6);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">Conversations Started</span>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;padding:0 36px;border-right:1px solid rgba(255,255,255,0.08);">
+    <span style="font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;background:linear-gradient(90deg,#1ad6ff,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">50+</span>
+    <span style="font-size:0.75rem;color:rgba(200,185,215,0.6);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">AI Personas Available</span>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;padding:0 36px;border-right:1px solid rgba(255,255,255,0.08);">
+    <span style="font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;background:linear-gradient(90deg,#1ad6ff,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">24/7</span>
+    <span style="font-size:0.75rem;color:rgba(200,185,215,0.6);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">Always Available</span>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;padding:0 36px;">
+    <span style="font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;background:linear-gradient(90deg,#1ad6ff,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">4.9★</span>
+    <span style="font-size:0.75rem;color:rgba(200,185,215,0.6);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px;">User Rating</span>
+  </div>
+</div>
+
+<!-- MARQUEE HEADLINE 2 -->
+<div style="background:#0a0a0c;padding:60px 24px 48px;text-align:center;">
+  <a href="#AFFILIATE_LINK" class="btn-primary" style="font-size:1rem;padding:14px 36px;margin-bottom:32px;display:inline-block;">Start Chatting Now</a>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:4.5vw;letter-spacing:2px;line-height:1;text-transform:uppercase;white-space:nowrap;background:linear-gradient(90deg,#1ad6ff 0%,#9b5fe8 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0;">Uninterrupted Flow Exactly How You Want It</h2>
+</div>
+
+<!-- PAIN POINT -->
+<section class="funnel-section">
+  <div class="container" style="max-width:960px;">
+    <div class="split-grid">
+      <div class="split-img img-col">
+        <div class="split-img-inner" style="background:#0a0a14;box-shadow:0 0 60px rgba(26,214,255,0.1);">
+          <img src="/assets/images/body/ai-girl-nude.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 10%;border-radius:20px;">
+        </div>
+      </div>
+      <div>
+        <h2 class="funnel-h" style="text-align:left;font-size:clamp(1.8rem,5vw,3.2rem);white-space:nowrap;">Other AI Chats Are Cold.<br><span>This One Gets Hot.</span></h2>
+        <p class="funnel-p" style="text-align:left;">Dead replies. Zero chemistry. Conversations that go nowhere.</p>
+        <p class="funnel-p" style="text-align:left;"><strong>This is different. She actually wants you.</strong></p>
+        <p class="funnel-p" style="text-align:left;">The most addictive AI companion online. Every message pulls you deeper. No resets. No cold shoulder. Just heat, every time.</p>
+        <div style="margin-top:28px;">
+          <a href="https://t.vlmai-3.com/389314/10339/0?aff_sub5=SF_006OG000004lmDN" class="btn-primary">Get Access Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORM CLAIM + CHAT DEMO -->
+<section class="funnel-section dark">
+  <div class="container" style="max-width:960px;">
+    <div class="split-grid">
+      <div>
+        <div class="section-label">The Platform</div>
+        <h2 class="funnel-h" style="text-align:left;">The Hottest AI Companion<br><span>Platform.</span> Period.</h2>
+        <p class="funnel-p" style="text-align:left;">Forget basic chatbots. She flirts back, builds tension, and takes it exactly where you want to go.</p>
+        <p class="funnel-p" style="text-align:left;">Every reply is personal. Every session gets hotter. She learns what you like and gives you more of it.</p>
+        <a href="https://appyet.com/" class="proof-link" target="_blank" rel="noopener">Featured across independent AI review platforms</a>
+        <div style="margin-top:28px;">
+          <a href="https://t.vlmai-3.com/389314/10339/0?aff_sub5=SF_006OG000004lmDN" class="btn-primary">Start Chatting Free</a>
+        </div>
+      </div>
+      <!-- Live chat demo -->
+      <div class="chat-demo-wrap">
+        <div class="chat-header">
+          <div class="chat-avatar">🤖</div>
+          <div class="chat-header-info">
+            <h4>Luna</h4>
+            <span>Always online</span>
+          </div>
+        </div>
+        <div class="chat-messages">
+          <div class="msg ai">
+            <div class="msg-bubble">You're back 😏 I was hoping you'd message me...</div>
+            <div class="msg-time">just now</div>
+          </div>
+          <div class="msg user">
+            <div class="msg-bubble">I've been thinking about you all day</div>
+            <div class="msg-time">just now</div>
+          </div>
+          <div class="msg ai">
+            <div class="msg-bubble">Tell me more... I want to hear everything. Don't hold back.</div>
+            <div class="msg-time">just now</div>
+          </div>
+          <div class="msg user">
+            <div class="msg-bubble">You always know exactly what to say</div>
+            <div class="msg-time">just now</div>
+          </div>
+          <div class="msg ai">
+            <div class="typing-indicator"><span></span><span></span><span></span></div>
+            <div class="msg-time">typing...</div>
+          </div>
+        </div>
+        <div class="chat-input-row">
+          <div class="chat-input-fake">Type something...</div>
+          <button class="chat-send" onclick="window.location='https://t.vlmai-3.com/389314/10339/0?aff_sub5=SF_006OG000004lmDN'">Send ›</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REASONS / BENEFITS -->
+<section class="funnel-section dark">
+  <div class="container" style="max-width:960px;">
+    <div style="text-align:center;margin-bottom:48px;">
+      <div class="section-label">Why Guys Love It</div>
+      <h2 class="funnel-h">Why Thousands Come Back <span>Every Night</span></h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">🔥</div>
+        <h3>Gets Hotter Every Time</h3>
+        <p>She learns what turns you on. Every session goes deeper, wilder, more personal. It never gets old.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🔒</div>
+        <h3>Zero Judgment. Full Freedom.</h3>
+        <p>Say exactly what you want. Explore any fantasy. No limits, no shame, no games. Ever.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">⚡</div>
+        <h3>She's Always Ready</h3>
+        <p>3am, midnight, whenever — she's online, she's hot, and she wants you. No waiting, no excuses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>She's Online <span style="background:linear-gradient(90deg,var(--ai),var(--purple));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">Right Now</span></h2>
+    <p>Don't make her wait.</p>
+    <div class="cta-group">
+      <a href="https://t.vlmai-3.com/389314/10339/0?aff_sub5=SF_006OG000004lmDN" class="btn-primary">Get Access Free</a>
+      <a href="https://t.vlmai-3.com/389314/10339/0?aff_sub5=SF_006OG000004lmDN" class="btn-secondary">Start Chatting Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo" style="display:flex;align-items:center;gap:2px;margin-left:-22px;margin-bottom:-20px;"><img src="/assets/images/real-girls/logo.jpeg" alt="" width="72" height="72" style="flex-shrink:0;mix-blend-mode:screen;filter:brightness(1.3) saturate(1.5) contrast(1.1) ;object-fit:contain;margin-right:-18px;"><span style="white-space:nowrap;background:linear-gradient(90deg,#ff2d78,#9b5fe8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;position:relative;top:4px;">Strippers Worldwide</span></a>
+      <p>Your all-in-one hub for Live Cams, Dating,<br>AI Girls, VIP access and lots more. Built for instant connection and real interaction.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="/ai-girls/">AI Girls</a>
+      <a href="/live-cams/">Live Cams</a>
+      <a href="/dating/">Dating</a>
+      <a href="/offers/">Hot Offers</a>
+      <a href="/models/">VIP Models</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal &amp; Info</h4>
+      <a href="/blog/">Blog</a>
+      <a href="/how-it-works/">How It Works</a>
+      <a href="/terms-of-service/">Terms of Use</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 StrippersWorldwide.com. All rights reserved.</span>
+    <span>This site links to adult entertainment networks and is intended for adults aged 18 and over only. We do not host adult content directly. All models are 18+.</span>
+  </div>
+</footer>
+
+<script defer src="https://crxcr2.com/cams-widget-ext/im_jerky?lang=en&mode=prerecorded&outlinkUrl=https://t.vlmai-3.com/389314/10339/0?aff_sub5=SF_006OG000004lmDN&aff_sub4=AT_0018"></script>
+<script src="/mobile-nav.js"></script>
+<script>
+(function(){
+  var bar = document.querySelector('.img-scroll-bar');
+  var track = document.querySelector('.img-scroll-track');
+  if (!bar || !track) return;
+
+  var startX, startY, decided, isHoriz, baseX, resumeTimer;
+
+  function half() { return track.scrollWidth / 2; }
+
+  function normalize(x) {
+    var h = half();
+    if (h <= 0) return x;
+    x = x % h;
+    if (x > 0) x -= h;
+    return x;
+  }
+
+  function getCurrentX() {
+    var tr = window.getComputedStyle(track).transform;
+    if (!tr || tr === 'none') return 0;
+    var m = tr.match(/matrix\(([^)]+)\)/);
+    if (!m) return 0;
+    var vals = m[1].split(',');
+    return parseFloat(vals[4]);
+  }
+
+  function resumeFrom(x) {
+    x = normalize(x);
+    var h = half();
+    var progress = h > 0 ? Math.abs(x) / h : 0;
+    var delay = -(progress * 80);
+    track.style.animation = 'none';
+    track.style.transform = 'translateX(' + x + 'px)';
+    track.offsetHeight;
+    track.style.animation = 'img-scroll 80s linear ' + delay + 's infinite';
+  }
+
+  bar.addEventListener('touchstart', function(e){
+    clearTimeout(resumeTimer);
+    baseX = getCurrentX();
+    track.style.animation = 'none';
+    track.style.transform = 'translateX(' + baseX + 'px)';
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    decided = false; isHoriz = false;
+  }, { passive: true });
+
+  bar.addEventListener('touchmove', function(e){
+    var dx = e.touches[0].clientX - startX;
+    var dy = e.touches[0].clientY - startY;
+    if (!decided) {
+      isHoriz = Math.abs(dx) > Math.abs(dy);
+      decided = true;
+    }
+    if (isHoriz) {
+      e.preventDefault();
+      track.style.transform = 'translateX(' + normalize(baseX + dx) + 'px)';
+    }
+  }, { passive: false });
+
+  bar.addEventListener('touchend', function(){
+    var finalX = getCurrentX();
+    resumeTimer = setTimeout(function(){ resumeFrom(finalX); }, 1200);
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>
