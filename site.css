@@ -121,7 +121,7 @@ nav {
 footer {
   background: #0a0a0c;
   border-top: 1px solid var(--border);
-  padding: 60px 24px 32px;
+  padding: 60px 24px 12px;
 }
 .footer-grid {
   max-width: 100%;
