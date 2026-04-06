@@ -177,9 +177,9 @@ footer {
   padding: 14px 28px; border-radius: 999px;
   text-decoration: none; cursor: pointer; transition: all 0.15s;
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2), 0 0 16px rgba(155,95,232,0.2);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2), 0 0 22px rgba(155,95,232,0.45), 0 0 45px rgba(155,95,232,0.18);
 }
-.btn-secondary:hover { background: rgba(255,255,255,0.11); transform: translateY(-1px); box-shadow: 0 5px 14px rgba(0,0,0,0.25), 0 0 22px rgba(155,95,232,0.35); }
+.btn-secondary:hover { background: rgba(255,255,255,0.11); transform: translateY(-1px); box-shadow: 0 5px 14px rgba(0,0,0,0.25), 0 0 30px rgba(155,95,232,0.65), 0 0 60px rgba(155,95,232,0.25); border-color: rgba(155,95,232,0.7); }
 .btn-secondary:active { transform: translateY(1px); border-bottom-width: 1px; }
 
 /* ── PAGE WRAPPER (offset fixed nav) ── */
