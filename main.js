@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ── Affiliate link click tracking (placeholder) ── */
-  document.querySelectorAll('a[href="#AFFILIATE_LINK"]').forEach(link => {
+  document.querySelectorAll('a[href="https://t.mbjms.com/389314/3788/0?bo=3471,3472,3473,3474,3475&target=textmessages&po=6456&aff_sub5=SF_006OG000004lmDN"]').forEach(link => {
     link.addEventListener('click', (e) => {
-      // Replace '#AFFILIATE_LINK' with your real affiliate URLs
+      // Replace 'https://t.mbjms.com/389314/3788/0?bo=3471,3472,3473,3474,3475&target=textmessages&po=6456&aff_sub5=SF_006OG000004lmDN' with your real affiliate URLs
       // and add any analytics tracking here (e.g. gtag event)
       console.log('Affiliate link clicked:', e.currentTarget.textContent.trim());
     });

@@ -64,8 +64,8 @@ c = c.replace('.footer-col a:hover { color: var(--text); }', '.footer-col a:hove
 c = c.replace('padding: 12px 32px; font-size: 0.85rem; color: var(--text);', 'padding: 12px 32px; font-size: 0.85rem; color: #ffffff;');
 
 // 17. Watch Live Now red, Start Chatting purple
-c = c.replace('<a href="#AFFILIATE_LINK" class="btn-primary">🔴 Watch Live Now</a>\n    <a href="#AFFILIATE_LINK" class="btn-secondary">💬 Start Chatting</a>',
-  '<a href="#AFFILIATE_LINK" class="btn-primary" style="background:#a50030;">🔴 Watch Live Now</a>\n    <a href="#AFFILIATE_LINK" class="btn-secondary" style="background:#7c3aed;border-color:#9b5cf6;">💬 Start Chatting</a>');
+c = c.replace('<a href="https://t.mbjms.com/389314/3788/0?bo=3471,3472,3473,3474,3475&target=textmessages&po=6456&aff_sub5=SF_006OG000004lmDN" class="btn-primary">🔴 Watch Live Now</a>\n    <a href="https://t.mbjms.com/389314/3788/0?bo=3471,3472,3473,3474,3475&target=textmessages&po=6456&aff_sub5=SF_006OG000004lmDN" class="btn-secondary">💬 Start Chatting</a>',
+  '<a href="https://t.mbjms.com/389314/3788/0?bo=3471,3472,3473,3474,3475&target=textmessages&po=6456&aff_sub5=SF_006OG000004lmDN" class="btn-primary" style="background:#a50030;">🔴 Watch Live Now</a>\n    <a href="https://t.mbjms.com/389314/3788/0?bo=3471,3472,3473,3474,3475&target=textmessages&po=6456&aff_sub5=SF_006OG000004lmDN" class="btn-secondary" style="background:#7c3aed;border-color:#9b5cf6;">💬 Start Chatting</a>');
 
 // 18. LIVE NOW badge color white
 c = c.replace('LIVE NOW — 12,400+ MODELS ONLINE\n      </div>', 'LIVE NOW — 12,400+ MODELS ONLINE\n      </div>');
